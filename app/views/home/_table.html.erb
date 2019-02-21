@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Imágen</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Nombre</th>     
+    </tr>
+  </thead>
+  <tbody>
+    <% @sorted_products.each_with_index do |product,index| %>
+        <tr>
+            <th scope="row"><%= index+1 %></th>
+            <td><%= image_tag product[:image], class: "img-responsive" %></td>
+            <td>$<%= product[:price] %></td>
+            <td><%= link_to product[:name], product[:link] %></td>          
+        </tr>
+    <% end %>
+  </tbody>
+</table>

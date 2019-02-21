@@ -1,0 +1,11 @@
+<%= form_tag url_for(action: 'show'), method: "post" do %>
+  <%= label_tag(:palabra, "Producto a buscar(solamente un palabra):") %>
+  <%= text_field_tag :palabra, nil, maxlength: 20 %>
+  <%= label_tag(:cantidad, "Cantidad de Productos a buscar:") %>
+  <%= number_field_tag :cantidad, nil, min: 1, max: 20 %>
+  <%= radio_button_tag(:desc, true) %>
+  <%= label_tag(:desc, "Descendiente") %>
+  <%= radio_button_tag(:asc, true) %>
+  <%= label_tag(:asc, "Ascendiente") %>
+  <%= submit_tag("Search") %>
+<% end %>

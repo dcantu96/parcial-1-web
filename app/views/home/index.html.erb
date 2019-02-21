@@ -1,0 +1,8 @@
+<h1 class="text-center">Mi Buscador de PCEL</h1>
+<br>
+<% if flash[:alert] %>
+    <div class="alert alert-danger" role="alert"><%= flash[:alert] %></div>
+<% end %>
+
+<%= render 'form' %>
+<%= render 'table' %>
